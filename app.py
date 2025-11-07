@@ -102,6 +102,10 @@ if st.button("Predict"):
     non_zero_cols = encoded_df.loc[0][encoded_df.loc[0] > 0].index.tolist()
     st.write("Which OHE columns fired:", non_zero_cols)
     st.write("Model dump length:", len(model.get_booster().get_dump()))
+    st.write("First 50 columns in input_processed:", list(input_processed.columns[:50]))
+    st.write("First 50 columns in feature_cols:", list(feature_cols[:50]))
+
+
 
 
 
