@@ -97,6 +97,10 @@ if st.button("Predict"):
     st.write("Model expects:", model.n_features_in_)
     bst = model.get_booster()
     st.write("Model expects:", len(bst.feature_names))
+    st.write("Encoded non-zeros:", (encoded_df.sum(axis=0) > 0).sum())
+    st.write("Encoded total sum:", encoded_df.sum().sum())
+
+
 
 
 
