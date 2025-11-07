@@ -99,6 +99,9 @@ if st.button("Predict"):
     st.write("Model expects:", len(bst.feature_names))
     st.write("Encoded non-zeros:", (encoded_df.sum(axis=0) > 0).sum())
     st.write("Encoded total sum:", encoded_df.sum().sum())
+    non_zero_cols = encoded_df.loc[0][encoded_df.loc[0] > 0].index.tolist()
+    st.write("Which OHE columns fired:", non_zero_cols)
+
 
 
 
