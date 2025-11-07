@@ -93,6 +93,7 @@ if st.button("Predict"):
 
 
 
-st.write("Input shape:", input_processed.shape)
-st.write("Model expects:", model.num_features())
+    st.write("Input shape:", input_processed.shape)
+    st.write("Model expects:", model.num_features())
+
 
