@@ -95,5 +95,10 @@ if st.button("Predict"):
 
     st.write("Input shape:", input_processed.shape)
     st.write("Model expects:", model.num_features())
+    st.write("Model expects:", model.n_features_in_)
+    bst = model.get_booster()
+    st.write("Model expects:", len(bst.feature_names))
+
+
 
 
